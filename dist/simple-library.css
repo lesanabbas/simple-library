@@ -17,20 +17,33 @@ body {
   overflow: hidden; /* Prevent body overflow */
 }
 
-/* simple-library.css */
+.demo-form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;  /* Restrict the maximum width */
+  overflow: hidden; /* Prevent overflow */
+  word-wrap: break-word; /* Break long words if needed */
+}
+
+/* Styling for the form */
 .simple-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 400px;
+  max-width: 100%; /* Ensure form width respects container */
   margin: 0 auto;
 }
 
+/* Form Input Styling */
 .input-box {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 100%; /* Ensure inputs don’t overflow */
 }
 
 textarea.input-box {
@@ -38,50 +51,23 @@ textarea.input-box {
   min-height: 100px;
 }
 
-.btn {
+button.time-slot,
+.submit-btn {
   padding: 10px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;  /* Prevent button overflow */
 }
 
-.btn:hover {
+button.time-slot:hover,
+.submit-btn:hover {
   background-color: #0056b3;
 }
 
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.demo-form-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-}
-
-h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
+/* Styling for Date and User Details */
 .date-slot,
 .user-details {
   margin-bottom: 20px;
@@ -98,15 +84,15 @@ input[type="date"],
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  width: 100%;
+  width: 100%; /* Prevent inputs from overflowing */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
+/* Styling for time-slot buttons */
 button.time-slot {
-  padding: 8px 15px;
   margin: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -133,6 +119,7 @@ button.time-slot:hover {
   color: #333;
 }
 
+/* Submit button styles */
 .submit-btn {
   background-color: #007bff;
   color: white;
@@ -146,40 +133,4 @@ button.time-slot:hover {
 
 .submit-btn:hover {
   background-color: #0056b3;
-}
-
-
-
-
-/* Styling for the form and buttons */
-.time-slot {
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.time-slot.selected {
-  background-color: #007bff;
-  color: white;
-}
-
-.time-slot:hover {
-  background-color: #ddd;
-}
-
-.demo-form-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-}
-
-.selected-time {
-  margin-top: 15px;
 }
