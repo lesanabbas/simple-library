@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Prevent body overflow */
+  overflow: scroll; /* Prevent body overflow */
 }
 
 .demo-form-container {
@@ -24,7 +24,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;  /* Restrict the maximum width */
-  overflow: hidden; /* Prevent overflow */
+  overflow: scroll; /* Prevent overflow */
   word-wrap: break-word; /* Break long words if needed */
 }
 
